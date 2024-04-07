@@ -1,48 +1,61 @@
 /* Paleta de colores verde musgo */
-
-body{
-  height: 74vh;
+body {
+  height: 100vh; /* Ajustado a 100vh para ocupar toda la altura de la ventana */
+  margin: 0; /* Asegura que no haya ningún espacio de margen alrededor del cuerpo */
 }
+
 .header {
-    display: flex;
-    background-color: #65923b; /* Verde musgo */
-    justify-content: center;
-    padding: 10px 20px;
-  }
+  display: flex;
+  background-color: #65923b; /* Verde musgo */
+  justify-content: center;
+  padding: 10px 20px;
+}
 
-  h2{
+h2 {
+  margin-top: 10px; /* Agregado px para especificar la cantidad de espacio */
+  font-family: sans-serif;
+}
 
-    margin-top: 10;
-    font-family: sans-serif;
+.content {
+  margin-top: 10px;
+  background-color: #cecece; /* Light gray */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 10px;
+  height: auto; /* Cambiado a auto para ajustar dinámicamente según el contenido */
+  max-width: 100%; /* Ancho máximo del contenedor */
+  overflow: hidden; /* Oculta cualquier contenido que se desborde del contenedor */
+}
 
-  }
-  
-  .menu {
-    display: flex;
-    list-style: none;
-    gap: 15px;
-    margin: 0; /* Resetear margen */
-  }
-  
+.content img {
+  max-width: 100%; /* Cambiado a 100% para asegurar que las imágenes siempre estén contenidas */
+  height: auto;
+  margin: 5px;
+}
+
+.footer {
+  background-color: #e0e0e0; /* Gris muy claro */
+  text-align: center;
+  padding: 2px;
+  margin-top: 8px;
+  border-top: 2px solid #333;
+  font-family: Arial, sans-serif;
+}
+
+@media screen and (max-width: 768px) {
   .content {
-    margin-top: 10px;
-    background-color: #cecece; /* Light gray */
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    padding: 20px; 
-    gap: 10px;
-    height: 98%;
+    flex-direction: column; /* Imágenes una debajo de la otra en pantallas pequeñas */
   }
-  
-  
-  
+
   .footer {
-    background-color: #e0e0e0; /* Gris muy claro */
-    text-align: center;
-    padding: 2px;
-    margin-top: 8px;
-    border-top: 2px solid #333;
-    font-family: Arial, sans-serif;
+    font-size: 0.8em; /* Reducir tamaño de fuente en el pie de página */
   }
-  
+
+  /* Ajustes de legibilidad para pantallas pequeñas */
+  body {
+    font-size: 16px; /* Tamaño de fuente base */
+    line-height: 1.6; /* Espaciado entre líneas */
+  }
+}
