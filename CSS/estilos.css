@@ -44,6 +44,14 @@ h2 {
   font-family: Arial, sans-serif;
 }
 
+/* Reglas de medios para pantallas de computadora (16:9) */
+@media screen and (min-aspect-ratio: 16/9) {
+  .content img {
+    max-width: 24%; /* Mostrar las cuatro imágenes una al lado de la otra */
+  }
+}
+
+/* Reglas de medios para pantallas pequeñas */
 @media screen and (max-width: 768px) {
   .content {
     flex-direction: column; /* Imágenes una debajo de la otra en pantallas pequeñas */
